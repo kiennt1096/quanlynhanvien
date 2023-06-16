@@ -34,17 +34,6 @@ public class SecurityConfiguration {
     }
     @Bean
     protected SecurityFilterChain configure(HttpSecurity http) throws Exception {
-//        http.csrf().disable();
-//        http.authorizeHttpRequests().requestMatchers("/login", "/registration", "/showFormUpdate**", "/logout**").permitAll()
-//                .anyRequest().authenticated()
-//                .and().exceptionHandling().accessDeniedPage("/403")
-//                .and()
-//                .formLogin().loginPage("/login").permitAll().and()
-//                .logout().invalidateHttpSession(true)
-//                .clearAuthentication(true)
-//                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                .logoutSuccessUrl("/logout?logout")
-//                .permitAll();
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/login", "/registration", "/showFormUpdate**", "/logout**").permitAll()

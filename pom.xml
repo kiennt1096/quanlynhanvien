@@ -10,9 +10,11 @@
 	</parent>
 	<groupId>com.kiennt1096</groupId>
 	<artifactId>quanlynhanvien</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>quanlynhanvien</name>
 	<description>Quan ly nhan vien project for Spring Boot</description>
+	<packaging>war</packaging>
+
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -53,6 +55,11 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -63,5 +70,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
